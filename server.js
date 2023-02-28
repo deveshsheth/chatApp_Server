@@ -1,5 +1,10 @@
 // Node Server which will handle socket io connections.
+const express = require('express')
+const app = express()
 
+app.get('/hello',(req,res) => {
+    res.send("Hello")
+})
 const io = require('socket.io')(8989) // import socket and define port number.
 
 // const time = moment().format('h:mm a')
